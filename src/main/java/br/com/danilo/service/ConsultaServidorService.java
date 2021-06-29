@@ -35,7 +35,7 @@ public class ConsultaServidorService {
 		
 		//tratar caracteres
 		servidoresContendoPlayer.stream()
-		.filter(w -> w.getName() != null)
+//		.filter(w -> w.getName() != null)
 		.forEach(e ->{
 			 e.setName(tratarCaracteres(e.getName()));
 			 
@@ -79,7 +79,7 @@ public class ConsultaServidorService {
 		
 		//tratar caracteres
 		body.stream()
-		.filter(w -> w.getName() != null)
+//		.filter(w -> w.getName() != null)
 		.forEach(e ->{
 			 e.setName(tratarCaracteres(e.getName()));
 			 
