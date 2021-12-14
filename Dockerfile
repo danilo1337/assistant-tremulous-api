@@ -18,7 +18,7 @@ USER root
 RUN apk update && apk add bash
 
 #Copiando aplicação
-COPY target/${JAR_FILE} aplicacao.war
+COPY ./target/${JAR_FILE} aplicacao.war
 #Execulçao da aplicação
 ENTRYPOINT ["java","-jar","/aplicacao.war"]
 
