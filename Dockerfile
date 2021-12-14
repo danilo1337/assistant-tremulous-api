@@ -9,7 +9,7 @@ USER springdocker:springdocker
 #MAINTAINER Time Infra <ti.infraestrutura@fujioka.inf.br>
 
 #Variavel recebendo nome arquivo
-ARG JAR_FILE=*.war
+ARG JAR_FILE=*.jar
 
 #Argumentos da JVM 
 ENV JAVA_TOOL_OPTIONS ""
@@ -18,7 +18,7 @@ USER root
 RUN apk update && apk add bash
 
 #Copiando aplicação
-COPY /target/${JAR_FILE} aplicacao.war
+COPY /target/${JAR_FILE} aplicacao.jar
 #Execulçao da aplicação
-ENTRYPOINT ["java","-jar","/aplicacao.war"]
+ENTRYPOINT ["java","-jar","/aplicacao.jar"]
 
